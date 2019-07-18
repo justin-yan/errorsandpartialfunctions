@@ -77,7 +77,7 @@ object ExerciseTwo {
     * - The first is that `map` and `getOrElse` play extremely well together.
     *   The values you would like to *default* to in the event of an error often don't make any sense in the context of the intermediate processing you would like to do in the event of a *success*.
     *   By allowing yourself to safely manipulate values while *carrying* the error forward to be handled later, you allow error handling to live closer to the end result.
-    * - The second is that we often want to perform multiple unsafe operations, where the later actions operations on the earlier operations.
+    * - The second is that we often want to perform multiple unsafe operations, where the later operations require output from earlier operations.
     *   In these situations, there typically isn't a default for the first operation that will result in correct overall behavior when input into the later operations, which makes nested try/catches fairly complex.
     *   On top of this error handling in a sequence of unsafe operations is often to *get the first failure* and return it, which means that `Failure` is *flattenable* (a key aspect of being monadic)
     */
