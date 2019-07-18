@@ -22,8 +22,8 @@ object ExerciseOne {
     *   Any is Scala's catchall type, meaning literally anything you pass in will typecheck.
     *   More importantly, we can bind a *variable on the left* that we can then use on the *right*.
     *
-    *   Try replacing the `???` on the right with `x.`, and then press ctrl+space to see what methods you can autocomplete.
-    *   For which cases does `x + 1` on the right side compile?
+    *   Try replacing the `???` on the right with `tx.`, and then press ctrl+space to see what methods you can autocomplete.
+    *   For which cases does `tx + 1` on the right side compile?
     */
   def exampleTypeConstraint(x: Any): Int = x match {
     case tx: String => tx.length
